@@ -3,6 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
+       - REPOSITORY_URI=258076216385.dkr.ecr.us-east-1.amazonaws.com/devops    
        - echo Logging in to Amazon ECR...
        - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
        - docker build -t devops:latest .
