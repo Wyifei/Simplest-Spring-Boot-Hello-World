@@ -23,4 +23,5 @@ phases:
       - printf '[{"name":"web","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
     files: 
-      - appspec.yml 
+      - appspec.yml
+      - taskdef.json 
